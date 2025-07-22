@@ -1,0 +1,92 @@
+import random
+
+rock = ''' AI
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = ''' AI
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = ''' AI
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+ai_choice = [rock,paper, scissors]
+random_ai = random.choice(ai_choice)
+print(random_ai)
+
+user_input =input("Type 0 for Rock, 1 for Paper, 2 for Scissors.")
+if user_input == "0":
+    print(''' You
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+''')
+    if user_input == "0" and random_ai == ai_choice[0]:
+        print("Stalemate")
+    elif user_input == "0" and random_ai == ai_choice[1]:
+        print("You Lose")
+    elif user_input == "0" and random_ai == ai_choice[2]:
+        print("You Win")
+    else:
+        print("You Lose")
+
+elif user_input == "1":
+    print(
+    '''  You
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+    )
+    if user_input == "1" and random_ai == ai_choice[1]:
+        print("Stalemate")
+    elif user_input == "1" and random_ai == ai_choice[0]:
+        print("You Win")
+    elif user_input == "1" and random_ai == ai_choice[2]:
+        print("You Lose")
+
+    else:
+        print("You Lose")
+
+elif user_input == "2":
+    print(
+        '''  You
+            _______
+        ---'   ____)____
+                  ______)
+               __________)
+              (____)
+        ---.__(___)
+        '''
+
+    )
+    if user_input == "2" and random_ai == ai_choice[2]:
+        print("Stalemate")
+    elif user_input == "2" and random_ai == ai_choice[0]:
+        print("You Lose")
+    elif user_input == "2" and random_ai == ai_choice[1]:
+        print("You Win")
+    else:
+        print("You Lose")
